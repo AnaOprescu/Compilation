@@ -471,7 +471,14 @@ class PPProcCall extends PPInst {
 
 }//PPProcCall
     
-class PPSkip extends PPInst {}//PPSkip
+class PPSkip extends PPInst {
+
+	UPPInst toUPP(ArrayList<String> locals) {
+		// TODO Auto-generated method stub
+		return null;
+	}//PPSkip
+	
+}//PPSkip
 
 class PPSeq extends PPInst {
 
