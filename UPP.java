@@ -15,12 +15,22 @@ class UPPCte extends UPPExpr {
     UPPCte (int val) {
         this.val = val;
     }//UPPCte
-
+    String toString(){
+    	System.out.println(val);
+    }
 }//UPPCte
 
-class UPPTrue extends UPPExpr {}//UPPTrue
+class UPPTrue extends UPPExpr {
+    String toString(){
+		System.out.println("true");
+	}
+}//UPPTrue
 
-class UPPFalse extends UPPExpr {}//UPPFalse
+class UPPFalse extends UPPExpr {
+    String toString(){
+		System.out.println("false");
+	}
+}//UPPFalse
 
 class UPPVar extends UPPExpr {
 
@@ -29,7 +39,9 @@ class UPPVar extends UPPExpr {
     UPPVar (String name) {
         this.name = name;
     }//UPPVar
-
+    String toString(){
+    	System.out.println(name);
+    }
 }//UPPVar
 
 class UPPGVar extends UPPExpr {
@@ -39,7 +51,9 @@ class UPPGVar extends UPPExpr {
     UPPGVar (String name) {
         this.name = name;
     }//UPPGVar
-
+    String toString(){
+    	System.out.println(name);
+    }
 }//UPPGVar
 
 abstract class UPPUnOp extends UPPExpr {
@@ -53,7 +67,9 @@ class UPPInv extends UPPUnOp {
     UPPInv (UPPExpr e) {
         this.e = e;
     }//UPPInv
-
+    String toString(){
+    	System.out.println(e);
+    }
 }//UPPInv
 
 class UPPNot extends UPPUnOp {
@@ -61,7 +77,9 @@ class UPPNot extends UPPUnOp {
     UPPNot (UPPExpr e) {
         this.e = e;
     }//UPPNot
-
+    String toString(){
+    	System.out.println("- "+e);
+    }
 }//UPPNot
 
 abstract class UPPBinOp extends UPPExpr {
@@ -76,7 +94,9 @@ class UPPAdd extends UPPBinOp {
         this.e1 = e1;
         this.e2 = e2;
     }//UPPAdd
-
+    String toString(){
+		System.out.println(e1+" + "+e2);
+	}
 }//UPPAd
 
 class UPPSub extends UPPBinOp {
@@ -85,7 +105,9 @@ class UPPSub extends UPPBinOp {
         this.e1 = e1;
         this.e2 = e2;
     }//UPPSub
-
+    String toString(){
+		System.out.println(e1+" - "+e2);
+	}
 }//UPPSub
 
 class UPPMul extends UPPBinOp {
@@ -94,7 +116,9 @@ class UPPMul extends UPPBinOp {
         this.e1 = e1;
         this.e2 = e2;
     }//UPPMul
-
+    String toString(){
+		System.out.println(e1+" * "+e2);
+	}
 }//UPPMul
 
 class UPPDiv extends UPPBinOp {
@@ -103,7 +127,9 @@ class UPPDiv extends UPPBinOp {
         this.e1 = e1;
         this.e2 = e2;
     }//UPPDiv
-
+     String toString(){
+		System.out.println(e1+" / "+e2);
+	}
 }//UPPDiv
 
 class UPPAnd extends UPPBinOp {
@@ -112,7 +138,9 @@ class UPPAnd extends UPPBinOp {
         this.e1 = e1;
         this.e2 = e2;
     }//UPPAnd
-
+     String toString(){
+		System.out.println(e1+" and "+e2);
+	}
 }//UPPAnd
 
 class UPPOr extends UPPBinOp {
@@ -121,7 +149,9 @@ class UPPOr extends UPPBinOp {
         this.e1 = e1;
         this.e2 = e2;
     }//UPPOr
-
+    String toString(){
+		System.out.println(e1+" or "+e2);
+	}
 }//UPPOr
 
 class UPPLe extends UPPBinOp {
@@ -130,7 +160,9 @@ class UPPLe extends UPPBinOp {
         this.e1 = e1;
         this.e2 = e2;
     }//UPPLe
-
+    String toString(){
+		System.out.println(e1+" < "+e2);
+	}
 }//UPPLe
 
 class UPPLeq extends UPPBinOp {
@@ -139,7 +171,9 @@ class UPPLeq extends UPPBinOp {
         this.e1 = e1;
         this.e2 = e2;
     }//UPPLeq
-
+    String toString(){
+		System.out.println(e1+" <= "+e2);
+	}
 }//UPPLeq
 
 class UPPEq extends UPPBinOp {
@@ -148,7 +182,9 @@ class UPPEq extends UPPBinOp {
         this.e1 = e1;
         this.e2 = e2;
     }//UPPEq
-
+    String toString(){
+		System.out.println(e1+" = "+e2);
+	}
 }//UPPEq
 
 class UPPNeq extends UPPBinOp {
@@ -157,7 +193,9 @@ class UPPNeq extends UPPBinOp {
         this.e1 = e1;
         this.e2 = e2;
     }//UPPNeq
-
+    String toString(){
+		System.out.println(e1+" != "+e2);
+	}
 }//UPPNeq
 
 class UPPGeq extends UPPBinOp {
@@ -166,7 +204,9 @@ class UPPGeq extends UPPBinOp {
         this.e1 = e1;
         this.e2 = e2;
     }//UPPGeq
-
+    String toString(){
+		System.out.println(e1+" >= "+e2);
+	}
 }//UPPGeq
 
 class UPPGe extends UPPBinOp {
@@ -175,7 +215,9 @@ class UPPGe extends UPPBinOp {
         this.e1 = e1;
         this.e2 = e2;
     }//UPPGe
-
+    String toString(){
+		System.out.println(e1+" > "+e2);
+	}
 }//UPPGe
 
 class Alloc extends Callee {}//Alloc
@@ -189,7 +231,9 @@ class UPPFunCall extends UPPExpr {
         this.callee = callee;
         this.args = args;
     }//FunCall
-
+     String toString(){
+		System.out.println(callee+"("+args+")");
+	}
 }//FunCall
 
 class UPPLoad extends UPPExpr {
@@ -199,7 +243,9 @@ class UPPLoad extends UPPExpr {
     UPPLoad (UPPExpr addr) {
         this.addr = addr;
     }//UPPLoad
-
+     String toString(){
+		System.out.println(addr);
+	}
 }//UPPLoad
 
 /****************/
@@ -217,7 +263,9 @@ class UPPAssign extends UPPInst {
         this.name = name;
         this.val = val;
     }//UPPAssign
-
+    String toString(){
+		System.out.println(name+" := "+val);
+	}
 }//UPPAssign
 
 class UPPStore extends UPPInst {
@@ -228,7 +276,9 @@ class UPPStore extends UPPInst {
         this.addr = addr;
         this.val = val;
     }//UPPStore
-
+    String toString(){
+		System.out.println(addr+" = "+val);
+	}
 }//UPPStore
 
 class UPPCond extends UPPInst {
@@ -241,7 +291,9 @@ class UPPCond extends UPPInst {
         this.i1 = i1;
         this.i2 = i2;
     }//UPPCond
-
+    String toString(){
+		System.out.println("if "+i1+" then "+i2);
+	}
 }//UPPCond
 
 class UPPWhile extends UPPInst {
@@ -253,7 +305,9 @@ class UPPWhile extends UPPInst {
         this.cond = cond;
         this.i = i;
     }//UPPWhile
-
+    String toString(){
+		System.out.println("while "+i+" do");
+	}
 }//UPPWhile
 
 class UPPProcCall extends UPPInst {
@@ -265,7 +319,9 @@ class UPPProcCall extends UPPInst {
         this.callee = callee;
         this.args = args;
     }//UPPProcCall
-
+    String toString(){
+		System.out.println(callee+"("+args+")");
+	}
 }//UPPProcCall
     
 class UPPSkip extends UPPInst {}//UPPSkip
@@ -278,7 +334,9 @@ class UPPSeq extends UPPInst {
         this.i1 = i1;
         this.i2 = i2;
     }//UPPSeq
-
+    String toString(){
+		System.out.println(i1+""+i2);
+	}
 }//UPPSeq
 
 /***************************************/
@@ -306,7 +364,7 @@ abstract class UPPDef {
     String name;
     ArrayList<String> args, locals;
     UPPInst code;
-
+    abstract String toString();
 }//UPPDef
 
 class UPPFun extends UPPDef {
@@ -318,7 +376,9 @@ class UPPFun extends UPPDef {
         this.locals = locals;
         this.code = code;
     }//UPPFun
-
+    String toString(){
+		System.out.println(name+"("+args+")\n"+locals+"\n"+code);
+	}
 }//UPPFun
 
 class UPPProc extends UPPDef {
@@ -330,7 +390,9 @@ class UPPProc extends UPPDef {
         this.locals = locals;
         this.code = code;
     }//UPPProc
-
+     String toString(){
+		System.out.println(name+"("+args+")\n"+locals+"\n"+code);
+	}
 }//UPPProc
 
 /************/
@@ -348,5 +410,7 @@ class UPPProg {
         this.defs = defs;
         this.code = code;
     }//UPPProg
-
+     String toString(){
+		System.out.println(globals+"\n"+defs+"\n"+code);
+	}
 }//UPPProg
